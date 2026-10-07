@@ -1,0 +1,652 @@
+/* ================================
+   AutoCarePro - Global Styles
+   ================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+/* Remove default button/input styling issues */
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+/* ================================
+   APP
+   ================================ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f6f8;
+}
+
+/* ================================
+   SIDEBAR
+   ================================ */
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #172033;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.logo h2 {
+  color: white;
+  font-size: 21px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.logo span {
+  display: block;
+  color: #aeb8ca;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+.sidebar nav {
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar nav button,
+.sidebar-bottom button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #c4ccda;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.sidebar nav button:hover,
+.sidebar-bottom button:hover {
+  background: #26334b;
+  color: white;
+}
+
+.sidebar nav button.active {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding: 15px 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   MAIN CONTENT
+   ================================ */
+
+.content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.page {
+  width: 100%;
+}
+
+/* ================================
+   PAGE HEADER
+   ================================ */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  font-size: 30px;
+  color: #172033;
+  margin-bottom: 5px;
+}
+
+.page-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  background: #d1d5db;
+}
+
+/* ================================
+   DASHBOARD CARDS
+   ================================ */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.card h3 {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.card strong {
+  font-size: 25px;
+  color: #172033;
+}
+
+/* ================================
+   DASHBOARD SECTIONS
+   ================================ */
+
+.dashboard-section {
+  background: white;
+  border-radius: 10px;
+  padding: 22px;
+  margin-bottom: 22px;
+  border: 1px solid #e5e7eb;
+}
+
+.dashboard-section h2 {
+  font-size: 19px;
+  color: #172033;
+  margin-bottom: 18px;
+}
+
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.quick-actions button {
+  background: #f8fafc;
+  border: 1px solid #dbe1e8;
+  padding: 11px 16px;
+  border-radius: 7px;
+  color: #374151;
+}
+
+.quick-actions button:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+/* ================================
+   RECENT CUSTOMERS
+   ================================ */
+
+.mini-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.recent-row:last-child {
+  border-bottom: none;
+}
+
+.recent-row strong {
+  display: block;
+  font-size: 14px;
+  color: #172033;
+}
+
+.recent-row span {
+  display: block;
+  font-size: 12px;
+  color: #7b8494;
+  margin-top: 3px;
+}
+
+.recent-row button {
+  border: none;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 7px 13px;
+  border-radius: 5px;
+}
+
+/* ================================
+   TOOLBAR
+   ================================ */
+
+.toolbar {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.toolbar input {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  padding: 11px 13px;
+  font-size: 14px;
+}
+
+.toolbar input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.toolbar button {
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 7px;
+  padding: 10px 15px;
+}
+
+/* ================================
+   TABLE
+   ================================ */
+
+.table-container {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+thead {
+  background: #f8fafc;
+}
+
+th {
+  text-align: left;
+  padding: 13px 15px;
+  font-size: 12px;
+  color: #4b5563;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 13px 15px;
+  font-size: 13px;
+  color: #4b5563;
+  border-bottom: 1px solid #edf0f3;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+td strong {
+  color: #172033;
+}
+
+.center {
+  text-align: center;
+  padding: 35px !important;
+  color: #6b7280;
+}
+
+/* ================================
+   ACTION BUTTONS
+   ================================ */
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.edit-btn {
+  background: #eff6ff;
+}
+
+.edit-btn:hover {
+  background: #dbeafe;
+}
+
+.delete-btn {
+  background: #fef2f2;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+}
+
+/* ================================
+   MODAL
+   ================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  color: #172033;
+}
+
+.close-btn {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 6px;
+  font-size: 22px;
+  color: #4b5563;
+}
+
+.close-btn:hover {
+  background: #e5e7eb;
+}
+
+/* ================================
+   FORM
+   ================================ */
+
+.modal form {
+  padding: 20px;
+}
+
+.modal form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.modal form label:first-child {
+  margin-top: 0;
+}
+
+.modal form input,
+.modal form textarea,
+.modal form select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  padding: 11px 12px;
+  font-size: 14px;
+  color: #172033;
+  background: white;
+}
+
+.modal form input:focus,
+.modal form textarea:focus,
+.modal form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.modal form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.form-buttons button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.form-buttons button[type="button"] {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* ================================
+   EMPTY MODULE PAGE
+   ================================ */
+
+.empty-page {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.empty-page h1 {
+  color: #172033;
+  margin-bottom: 8px;
+}
+
+.empty-page p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 190px;
+  }
+
+  .content {
+    margin-left: 190px;
+    width: calc(100% - 190px);
+    padding: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    width: 65px;
+  }
+
+  .sidebar .logo > div:not(.logo-icon),
+  .sidebar nav button,
+  .sidebar-bottom button {
+    font-size: 0;
+  }
+
+  .sidebar nav button {
+    text-align: center;
+    padding: 12px 5px;
+  }
+
+  .sidebar-bottom button {
+    text-align: center;
+  }
+
+  .content {
+    margin-left: 65px;
+    width: calc(100% - 65px);
+    padding: 15px;
+  }
+}
